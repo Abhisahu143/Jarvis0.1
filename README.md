@@ -1,164 +1,100 @@
 # Jarvis - AI Voice Assistant
+<p align="center">
+  <img src="https://i.pinimg.com/736x/99/1c/b1/991cb1a7bdee3187796e283d37eaa32f.jpg" alt="Jarvis AI Banner" width="100%" />
+</p>
 
-A Python-based AI voice assistant that works on both Termux (Android) and Windows.
+A Python-based AI voice assistant that works on both **Termux (Android)** and **Windows** platforms.
 
-## Features
+---
 
-- Voice commands in English and Hindi
-- Time and date queries
-- Web searches
-- Gemini AI integration
-- Wikipedia searches
-- System information
-- Clipboard operations
-- App and website opening
-- Camera control
+## 🌟 Features
 
-## Setup Instructions
+- 🎙️ Voice commands in **English** and **Hindi**
+- 🕒 Time and date queries
+- 🔍 Web searches
+- 🤖 Gemini AI integration
+- 📚 Wikipedia searches
+- 💻 System information (battery, CPU, disk)
+- 📋 Clipboard operations
+- 📱 Open apps and websites
+- 📷 Camera control
 
-### For Termux (Android)
+---
 
-1. Install Termux from F-Droid or Google Play Store
-2. Install system dependencies:
+## 🗣️ Available Commands
+
+### 🕐 Time and Date
+- "What time is it?"
+- "What's the date?"
+- "Time batao" *(Hindi)*
+- "Date kitna hai" *(Hindi)*
+
+### 🔎 Search
+- "Search for [query]"
+- "Find [query]"
+- "What is [query]"
+
+### 🤖 Gemini AI
+- "Ask gemini [query]"
+
+### 📚 Wikipedia
+- "Wikipedia [query]"
+- "Tell me about [query]"
+
+### 💻 System Info
+- "Battery status"
+- "CPU usage"
+- "Disk usage"
+
+### 📋 Clipboard
+- "Copy [text] to clipboard"
+- "What's in clipboard"
+
+### 📱 Open App or Website
+- "Open Chrome"
+- "Open WhatsApp"
+- "Open YouTube"
+- "Open Facebook"
+- "Open Instagram"
+- "Open Twitter"
+- "Open Gmail"
+- "Open WhatsApp Web"
+- "Open Settings"
+- "Open Calculator"
+- "Open Camera"
+
+### 📸 Camera
+- "Take photo"
+- "Click picture"
+
+### ❌ Exit
+- "Exit"
+- "Quit"
+- "Bye"
+- "Bye bye"
+- "Tata" *(Hindi)*
+
+---
+
+## 🛠️ Getting Started
+
+### Clone the Repository
+
 ```bash
-pkg update && pkg upgrade
-pkg install python python-dev clang libjpeg-turbo libportaudio pulseaudio
-```
+git clone https://github.com/Abhisahu143/Jarvis0.1.git
+cd Jarvis0.1
 
-3. Install Python dependencies:
+```
+## Install Dependencies
+
+For Termux or Windows (CMD/PowerShell):
+
 ```bash
-pip install SpeechRecognition pyttsx3 wikipedia-api google-generativeai python-dotenv
+pip install -r requirements.txt
 ```
-
-4. Get a Gemini API key from Google Cloud Console and add it to `.env`:
-```
-GEMINI_API_KEY=your_api_key_here
-```
-
-### For Windows
-
-1. Install Python 3.10 or higher
-2. Install required packages:
-```bash
-pip install SpeechRecognition pyttsx3 wikipedia-api google-generativeai python-dotenv pypiwin32
-```
-
-3. Get a Gemini API key from Google Cloud Console and add it to `.env`:
-```
-GEMINI_API_KEY=your_api_key_here
-```
-
-## Usage
-
-Run the assistant:
-```bash
-python jarvis.py
-```
-
-### Available Commands
-
-- Time and Date:
-  - "What time is it?"
-  - "What's the date?"
-  - "Time batao" (Hindi)
-  - "Date kitna hai" (Hindi)
-
-- Search:
-  - "Search for [query]"
-  - "Find [query]"
-  - "What is [query]"
-
-- Gemini AI:
-  - "Ask gemini [query]"
-
-- Wikipedia:
-  - "Wikipedia [query]"
-  - "Tell me about [query]"
-
-- System Info:
-  - "Battery status"
-  - "CPU usage"
-  - "Disk usage"
-
-- Clipboard:
-  - "Copy [text] to clipboard"
-  - "What's in clipboard"
-
-- App/Website:
-  - "Open Chrome"
-  - "Open WhatsApp"
-  - "Open YouTube"
-  - "Open Facebook"
-  - "Open Instagram"
-  - "Open Twitter"
-  - "Open Gmail"
-  - "Open WhatsApp Web"
-  - "Open Settings"
-  - "Open Calculator"
-  - "Open Camera"
-
-- Camera:
-  - "Take photo"
-  - "Click picture"
-
-- Exit:
-  - "Exit"
-  - "Quit"
-  - "Bye"
-  - "Bye bye"
-  - "Tata" (Hindi)
-
-## Note
-
-For Windows users:
-- Ensure your microphone is working properly
-- You may need to install PyAudio separately for better audio input
-- Some commands might require administrative privileges
-
-## Troubleshooting
-
-1. If you encounter audio input issues:
-   - Check if your microphone is working
-   - Try running the script with administrator privileges
-   - Install PyAudio manually: `pip install PyAudio`
-
-2. If text-to-speech isn't working:
-   - Make sure your speakers are working
-   - Check if your Python environment has access to audio output
-
-3. If Gemini AI integration fails:
-   - Verify your API key in `.env`
-   - Check your internet connection
-   - Ensure you have sufficient quota in Google Cloud Console
-
-
-## Setup
-
-1.  **Clone the repository (or create the files manually).**
-
-2.  **Install Python dependencies:**
-    Navigate to the project directory in Termux and run:
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *   **Note on PyAudio:** If `pip install PyAudio` fails, ensure `libportaudio` and `python-dev` are installed via `pkg`. You might also need to set environment variables or install it with specific options. Refer to Termux community resources if issues persist.
-
-3.  **Grant Microphone Access:**
-    Termux needs permission to access the microphone. You might need to grant this via Android's app permission settings for Termux, or Termux might prompt you.
-
 ## Running the Assistant
-
 ```bash
 python jarvis.py
 ```
 
-## Basic Commands (to be implemented)
 
-*   "hello"
-*   "what time is it"
-*   "search for [query]"
-*   "exit"
-
-## Made With
-
-This project was created with ❤️ by [Abhisahu143](https://github.com/Abhisahu143/Jarvis0.1.git)#
